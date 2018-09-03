@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OA系统工作流界面</title>
+    <link type="text/css" href="bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="bootstrap-theme.min.css" rel="stylesheet" />
+    <link type="text/css" href="style.css" rel="stylesheet" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="checkbox.js"></script>
+	<script type="text/javascript" src="common.js"></script>
+	<!-- <script type="text/javascript" src="http://192.168.1.60:1000/target/target-script-min.js#anonymous"></script> -->
+	<script type="text/javascript">
+        function alert(str){
+            obcInvoke.alertStr(str);
+        }
+		//获取表单数据
+        obcInvoke.getFormInfo();
+	</script>
+  </head>
+
+  <body>
+	<div class="container theme-showcase">
+		<div class="row">
+			<div id="flowInfo" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title" style="display: inline;">流程信息</h3>
+					<div class="flowOtherBtns" style="float:right;display:none;margin-top:-5px;"><button type="button" class="btn btn-sm btn-success" onclick="JavaBridge.showFlowStep();return false;">步骤</button> <button type="button" class="btn btn-sm btn-success" onclick="JavaBridge.showFlowEvent();return false;">事件</button></div>
+				</div>
+				<div class="panel-body">
+					<div class="input-group input-group-space">
+						<span class="input-group-addon">流程名称</span>
+						<input class="form-control" name="flowName" id="flowName" >
+					</div>
+					<div class="input-group input-group-space">
+						<span class="input-group-addon">流程编号</span>
+						<input class="form-control" name="flowNumber" id="flowNumber" >
+					</div>
+					<div class="input-group input-group-space">
+						<span class="input-group-addon">重要等级</span>
+						<select class="form-control" name="level" id="level" >
+							<option value="0">普通</option>
+							<option value="1">重要</option>
+							<option value="2">非常重要</option>
+						</select>
+					</div>
+					<div class="input-group input-group-space">
+						<span class="input-group-addon">申请理由</span>
+						<input class="form-control" name="reason" id="reason" >
+					</div>
+					<div class="input-group input-group-space">
+						<span class="input-group-addon">发 起 人</span>
+						<input class="form-control" name="uname" id="uname" >
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">发起时间</span>
+						<input class="form-control" name="posttime" id="posttime" >
+						<input name="type" id="type" type="hidden" value="agree" >
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="panel panel-info form bottom_none">
+				<div class="panel-heading">
+					<h3 class="panel-title">表单内容</h3>
+					<div class="panel-title-notice">
+						<label class="label2">必填:<div class="notice-box must"></div></label>
+						<!-- <label class="label2">可填<div class="notice-box write"></div></label>
+						<label class="label2">只读<div class="notice-box"></div></label> -->
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="panel-body">
+					<form role="form" id="form"></form>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
