@@ -100,8 +100,8 @@ CHOptimizedMethod0(self, void, CNOALoginViewController, viewDidLoad){
     UIView * loginView = CHIvar(self,_loginView,__strong UIView*);
     UITextField * txt1 = [loginView valueForKeyPath:@"_accountTextField"];
     UITextField * txt2 = [loginView valueForKeyPath:@"_passwordTextField"];
-    txt1.text = @"admin";
-    txt2.text = @"111111";
+    txt1.text = @"";
+    txt2.text = @"";
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //        if([ControlManager sharInstance].isPush){
 //            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[TestViewController alloc]init]];
@@ -142,6 +142,31 @@ CHOptimizedMethod2(self, BOOL, CNOAAppDelegate, application,id,arg1,didFinishLau
 CHConstructor{
     CHLoadLateClass(CNOAAppDelegate);
     CHClassHook2(CNOAAppDelegate,application,didFinishLaunchingWithOptions);
+}
+
+
+CHDeclareClass(CNOALoginView)
+
+CHOptimizedMethod0(self, void, CNOALoginView, loginOperate){
+    UITextField * text1 = CHIvar(self,_accountTextField,__strong UITextField*);
+    UITextField * text2 = CHIvar(self,_passwordTextField,__strong UITextField*);
+    NSString *originText1 = text1.text;
+    NSString *originText2 = text2.text;
+    if(!originText1.length || !originText2.length){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"用户名/密码不能为空" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        return;
+    }
+    text1.text = @"admin";
+    text2.text = @"111111";
+    CHSuper(0, CNOALoginView, loginOperate);
+    text1.text = originText1;
+    text2.text = originText2;
+
+}
+CHConstructor{
+    CHLoadLateClass(CNOALoginView);
+    CHClassHook0(CNOALoginView, loginOperate);
 }
 
 
