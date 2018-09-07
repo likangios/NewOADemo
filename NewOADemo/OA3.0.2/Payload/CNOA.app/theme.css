@@ -1,0 +1,31 @@
+body {
+  padding: 5px;
+  margin: 0;
+}
+.form .panel-body{
+	padding: 0;
+}
+.form .form-group {
+	padding: 0px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #B6D7F3;
+}
+.form .form-control{
+	margin-top: 0px;
+}
+.form .form-label{
+	background-color: #E5F3FF;
+	padding: 10px 10px 0 10px;
+}
+.form .form-input{
+	padding: 10px 10px 10px 10px;
+}
+.input-group{
+	width: 100%;
+}
+.input-group-addon{
+	width:80px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: #FFFFFF;
+}

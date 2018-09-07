@@ -33,6 +33,16 @@
 		799787D0213D2DEA00BEEE62 /* defaulIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799787CE213D2DEA00BEEE62 /* defaulIcon@2x.png */; };
 		799787D1213D2DEA00BEEE62 /* defaulIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 799787CF213D2DEA00BEEE62 /* defaulIcon@3x.png */; };
 		799787D3213D325C00BEEE62 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 799787D2213D325B00BEEE62 /* CoreTelephony.framework */; };
+		7997880C213E716600BEEE62 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7997880A213E716600BEEE62 /* AVOSCloud.framework */; };
+		7997880E213E71AF00BEEE62 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7997880D213E71AF00BEEE62 /* libz.tbd */; };
+		79978810213E71B600BEEE62 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7997880F213E71B600BEEE62 /* libc++.tbd */; };
+		79978812213E71BE00BEEE62 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 79978811213E71BE00BEEE62 /* libicucore.tbd */; };
+		79978814213E71C500BEEE62 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 79978813213E71C500BEEE62 /* libsqlite3.tbd */; };
+		79978816213E71CD00BEEE62 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79978815213E71CD00BEEE62 /* SystemConfiguration.framework */; };
+		79978818213E71D400BEEE62 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79978817213E71D400BEEE62 /* MobileCoreServices.framework */; };
+		7997881A213E71E300BEEE62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79978819213E71E300BEEE62 /* CoreLocation.framework */; };
+		79978820213E737100BEEE62 /* ControlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7997881E213E737000BEEE62 /* ControlManager.h */; };
+		79978822213E737100BEEE62 /* ControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7997881F213E737000BEEE62 /* ControlManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +104,16 @@
 		799787CE213D2DEA00BEEE62 /* defaulIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaulIcon@2x.png"; sourceTree = "<group>"; };
 		799787CF213D2DEA00BEEE62 /* defaulIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaulIcon@3x.png"; sourceTree = "<group>"; };
 		799787D2213D325B00BEEE62 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7997880A213E716600BEEE62 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		7997880D213E71AF00BEEE62 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7997880F213E71B600BEEE62 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		79978811213E71BE00BEEE62 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		79978813213E71C500BEEE62 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		79978815213E71CD00BEEE62 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		79978817213E71D400BEEE62 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		79978819213E71E300BEEE62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7997881E213E737000BEEE62 /* ControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlManager.h; sourceTree = "<group>"; };
+		7997881F213E737000BEEE62 /* ControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,10 +128,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7997881A213E71E300BEEE62 /* CoreLocation.framework in Frameworks */,
 				799787D3213D325C00BEEE62 /* CoreTelephony.framework in Frameworks */,
+				79978818213E71D400BEEE62 /* MobileCoreServices.framework in Frameworks */,
+				79978816213E71CD00BEEE62 /* SystemConfiguration.framework in Frameworks */,
+				79978814213E71C500BEEE62 /* libsqlite3.tbd in Frameworks */,
+				79978812213E71BE00BEEE62 /* libicucore.tbd in Frameworks */,
+				79978810213E71B600BEEE62 /* libc++.tbd in Frameworks */,
+				7997880E213E71AF00BEEE62 /* libz.tbd in Frameworks */,
 				79978791213D2AB600BEEE62 /* JavaScriptCore.framework in Frameworks */,
 				79978795213D2AB600BEEE62 /* UIKit.framework in Frameworks */,
 				79978793213D2AB600BEEE62 /* Foundation.framework in Frameworks */,
+				7997880C213E716600BEEE62 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +207,14 @@
 		7997878F213D2AB600BEEE62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79978819213E71E300BEEE62 /* CoreLocation.framework */,
+				79978817213E71D400BEEE62 /* MobileCoreServices.framework */,
+				79978815213E71CD00BEEE62 /* SystemConfiguration.framework */,
+				79978813213E71C500BEEE62 /* libsqlite3.tbd */,
+				79978811213E71BE00BEEE62 /* libicucore.tbd */,
+				7997880F213E71B600BEEE62 /* libc++.tbd */,
+				7997880D213E71AF00BEEE62 /* libz.tbd */,
+				7997880A213E716600BEEE62 /* AVOSCloud.framework */,
 				799787D2213D325B00BEEE62 /* CoreTelephony.framework */,
 				79978790213D2AB600BEEE62 /* JavaScriptCore.framework */,
 				79978792213D2AB600BEEE62 /* Foundation.framework */,
@@ -194,6 +230,8 @@
 				799787BD213D2AB600BEEE62 /* NewOADemoDylib.m */,
 				799787C9213D2B4100BEEE62 /* TestViewController.h */,
 				799787CA213D2B4100BEEE62 /* TestViewController.m */,
+				7997881E213E737000BEEE62 /* ControlManager.h */,
+				7997881F213E737000BEEE62 /* ControlManager.m */,
 				79978797213D2AB600BEEE62 /* Logos */,
 				7997879B213D2AB600BEEE62 /* Config */,
 				799787AC213D2AB600BEEE62 /* Tools */,
@@ -279,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				799787A1213D2AB600BEEE62 /* MDCycriptManager.h in Headers */,
+				79978820213E737100BEEE62 /* ControlManager.h in Headers */,
 				799787CB213D2B4100BEEE62 /* TestViewController.h in Headers */,
 				799787A5213D2AB600BEEE62 /* MDMethodTrace.h in Headers */,
 				799787AE213D2AB600BEEE62 /* LLDBTools.h in Headers */,
@@ -443,6 +482,7 @@
 				799787BE213D2AB600BEEE62 /* NewOADemoDylib.m in Sources */,
 				799787B8213D2AB600BEEE62 /* fishhook.c in Sources */,
 				799787B5213D2AB600BEEE62 /* AntiAntiDebug.m in Sources */,
+				79978822213E737100BEEE62 /* ControlManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,7 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = RRPRDZ5Y96;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -582,6 +622,7 @@
 					"$(MonkeyDevPath)/Frameworks/**",
 					"$(MonkeyDevPath)/Librarys/**",
 					"$(MonkeyDevTheosPath)/vendor/lib",
+					"$(PROJECT_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -594,6 +635,7 @@
 					"$(MonkeyDevPath)/include",
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/NewOADemo/Info.plist";
 				INSTALL_PATH = "@executable_path/Frameworks/libNewOADemoDylib.dylib";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,7 +665,7 @@
 					RevealServer,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
@@ -631,9 +673,10 @@
 		799787C3213D2AB600BEEE62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = E5EJ3R9VNE;
+				DEVELOPMENT_TEAM = RRPRDZ5Y96;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_BITCODE = NO;
@@ -644,6 +687,7 @@
 					"$(MonkeyDevPath)/Frameworks/**",
 					"$(MonkeyDevPath)/Librarys/**",
 					"$(MonkeyDevTheosPath)/vendor/lib",
+					"$(PROJECT_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -655,6 +699,7 @@
 					"$(MonkeyDevPath)/include",
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/NewOADemo/Info.plist";
 				INSTALL_PATH = "@executable_path/Frameworks/libNewOADemoDylib.dylib";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -681,16 +726,21 @@
 					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		799787C5213D2AB600BEEE62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AC3QX9VJ78;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RRPRDZ5Y96;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NewOADemo/Info.plist;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
 				MONKEYDEV_CLASS_DUMP = NO;
@@ -700,18 +750,25 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.perfay.oADemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perfay.oAProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "c045dd59-f118-4d15-8862-afd63de3efbc";
+				PROVISIONING_PROFILE_SPECIFIER = oa_dev;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		799787C6213D2AB600BEEE62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AC3QX9VJ78;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jiangsu Perfay Information Technology Co., Ltd.";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RRPRDZ5Y96;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NewOADemo/Info.plist;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
 				MONKEYDEV_CLASS_DUMP = NO;
@@ -721,9 +778,11 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.perfay.oADemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perfay.oAProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "a9819b62-4443-4077-9917-b326e5c41a88";
+				PROVISIONING_PROFILE_SPECIFIER = "oa-inhouse";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

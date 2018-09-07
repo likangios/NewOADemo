@@ -14,6 +14,8 @@
 #import <Cycript/Cycript.h>
 #import <MDCycriptManager.h>
 #import "TestViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "ControlManager.h"
 CHConstructor{
     NSLog(INSERT_SUCCESS_WELCOME);
     
@@ -100,13 +102,14 @@ CHOptimizedMethod0(self, void, CNOALoginViewController, viewDidLoad){
     UITextField * txt2 = [loginView valueForKeyPath:@"_passwordTextField"];
     txt1.text = @"admin";
     txt2.text = @"111111";
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[TestViewController alloc]init]];
-//        nav.navigationItem.title = @"哈哈";
-//        [nav setNavigationBarHidden:YES];
-//        [UIApplication sharedApplication].delegate.window.rootViewController = nav;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//        if([ControlManager sharInstance].isPush){
+//            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[TestViewController alloc]init]];
+//            nav.navigationItem.title = @"哈哈";
+//            [nav setNavigationBarHidden:YES];
+//            [UIApplication sharedApplication].delegate.window.rootViewController = nav;
+//        }
 //    });
-    
 }
 CHConstructor{
     CHLoadLateClass(CNOALoginViewController);
@@ -130,9 +133,11 @@ CHConstructor{
 
 CHDeclareClass(CNOAAppDelegate)
 
-CHOptimizedMethod2(self, void, CNOAAppDelegate, application,id,arg1,didFinishLaunchingWithOptions,id,arg2){
+CHOptimizedMethod2(self, BOOL, CNOAAppDelegate, application,id,arg1,didFinishLaunchingWithOptions,id,arg2){
     //get origin value
-    CHSuper2(CNOAAppDelegate, application, arg1, didFinishLaunchingWithOptions, arg2);
+   BOOL  value =  CHSuper2(CNOAAppDelegate, application, arg1, didFinishLaunchingWithOptions, arg2);
+    [AVOSCloud setApplicationId:@"heeBFMkVulCI6GmtpRwN5Uaw-gzGzoHsz" clientKey:@"Oq6J0kIvuTEcmthAtaGaORFE"];
+    return  value;
 }
 CHConstructor{
     CHLoadLateClass(CNOAAppDelegate);
